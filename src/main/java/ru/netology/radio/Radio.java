@@ -11,7 +11,7 @@ public class Radio {
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
 
-    public void nextRadioStation() {
+    public void next() {
         if (currentRadioStation >= maxRadioStation) {
             currentRadioStation = 0;
 
@@ -20,7 +20,7 @@ public class Radio {
         }
     }
 
-    public void prevRadioStation() {
+    public void prev() {
         if (currentRadioStation == minRadioStation) {
             currentRadioStation = maxRadioStation;
 
