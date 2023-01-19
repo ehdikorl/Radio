@@ -20,7 +20,7 @@ public class Radio {
         }
     }
 
-    public void PrevRadioStation() {
+    public void prevRadioStation() {
         if (currentRadioStation == minRadioStation) {
             currentRadioStation = maxRadioStation;
 

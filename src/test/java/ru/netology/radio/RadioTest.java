@@ -51,7 +51,7 @@ class RadioTest {
     void shouldChangeTheStationByPrevButtonIfCurrentIsNull() {
         Radio rad = new Radio();
         rad.setRadioStation(0);
-        rad.PrevRadioStation();
+        rad.prevRadioStation();
         assertEquals(9, rad.getCurrentRadioStation());
     }
 
@@ -59,7 +59,7 @@ class RadioTest {
     void shouldChangeTheStationByPrevButton() {
         Radio rad = new Radio();
         rad.setRadioStation(5);
-        rad.PrevRadioStation();
+        rad.prevRadioStation();
         assertEquals(4, rad.getCurrentRadioStation());
     }
 
