@@ -11,7 +11,7 @@ public class Radio {
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
 
-    public void changeWrongStationNumber() {
+    public void nextRadioStation() {
         if (currentRadioStation >= maxRadioStation) {
             currentRadioStation = 0;
 
@@ -20,7 +20,7 @@ public class Radio {
         }
     }
 
-    public void changeTheStationByPrevButton() {
+    public void PrevRadioStation() {
         if (currentRadioStation == minRadioStation) {
             currentRadioStation = maxRadioStation;
 

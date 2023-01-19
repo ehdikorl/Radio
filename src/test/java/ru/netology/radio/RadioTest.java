@@ -35,7 +35,7 @@ class RadioTest {
     void shouldChangeTheStationByButtonNextIfCurrentIsNine() {
         Radio rad = new Radio();
         rad.setRadioStation(9);
-        rad.changeWrongStationNumber();
+        rad.nextRadioStation();
         assertEquals(0, rad.getCurrentRadioStation());
     }
 
@@ -43,7 +43,7 @@ class RadioTest {
     void shouldTheNextChannelOfTheRadioStation() {
         Radio rad = new Radio();
         rad.setRadioStation(5);
-        rad.changeWrongStationNumber();
+        rad.nextRadioStation();
         assertEquals(6, rad.getCurrentRadioStation());
     }
 
@@ -51,7 +51,7 @@ class RadioTest {
     void shouldChangeTheStationByPrevButtonIfCurrentIsNull() {
         Radio rad = new Radio();
         rad.setRadioStation(0);
-        rad.changeTheStationByPrevButton();
+        rad.PrevRadioStation();
         assertEquals(9, rad.getCurrentRadioStation());
     }
 
@@ -59,7 +59,7 @@ class RadioTest {
     void shouldChangeTheStationByPrevButton() {
         Radio rad = new Radio();
         rad.setRadioStation(5);
-        rad.changeTheStationByPrevButton();
+        rad.PrevRadioStation();
         assertEquals(4, rad.getCurrentRadioStation());
     }
 
