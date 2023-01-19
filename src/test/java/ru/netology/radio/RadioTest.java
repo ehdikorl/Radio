@@ -8,41 +8,49 @@ class RadioTest {
 
 
     @Test
-    void shouldSetNumberRadiostationChanging() {
+    void shouldSetNumberRadioStationChanging() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(5);
+        rad.setRadioStation(5);
         int actual = rad.getCurrentRadioStation();
         assertEquals(5, actual);
     }
 
     @Test
-    void shoruldSelectingTheWrongRadioStationNumbe() {
+    void shouldSelectingTheWrongRadioStationNumber() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(-1);
-        rad.selectingTheWrongRadioStationNumber();
+        rad.setRadioStation(-1);
+
+        assertEquals(0, rad.getCurrentRadioStation());
+    }
+
+    @Test
+    void shouldSelectingTheWrongRadioStationNumber11() {
+        Radio rad = new Radio();
+        rad.setRadioStation(11);
+
         assertEquals(0, rad.getCurrentRadioStation());
     }
 
     @Test
     void shouldChangeTheStationByButtonNextIfCurrentIsNine() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(9);
-        rad.selectingTheWrongRadioStationNumber();
+        rad.setRadioStation(9);
+        rad.changeWrongStationNumber();
         assertEquals(0, rad.getCurrentRadioStation());
     }
 
     @Test
     void shouldTheNextChannelOfTheRadioStation() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(5);
-        rad.selectingTheWrongRadioStationNumber();
+        rad.setRadioStation(5);
+        rad.changeWrongStationNumber();
         assertEquals(6, rad.getCurrentRadioStation());
     }
 
     @Test
     void shouldChangeTheStationByPrevButtonIfCurrentIsNull() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(0);
+        rad.setRadioStation(0);
         rad.changeTheStationByPrevButton();
         assertEquals(9, rad.getCurrentRadioStation());
     }
@@ -50,14 +58,14 @@ class RadioTest {
     @Test
     void shouldChangeTheStationByPrevButton() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(5);
+        rad.setRadioStation(5);
         rad.changeTheStationByPrevButton();
         assertEquals(4, rad.getCurrentRadioStation());
     }
 
 
     @Test
-    void shouldIincreaseTheVolumeByOneStep() {
+    void shouldIncreaseTheVolumeByOneStep() {
         Radio rad = new Radio();
         rad.setCurrentVolume(5);
         rad.increaseVolume();
@@ -92,7 +100,7 @@ class RadioTest {
     @Test
     void shouldSetTheRadioChannelToIndicateItsNumber() {
         Radio rad = new Radio();
-        rad.setCurrentRadioStation(5);
+        rad.setRadioStation(5);
         assertEquals(5, rad.getCurrentRadioStation());
 
     }

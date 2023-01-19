@@ -1,4 +1,5 @@
 package ru.netology.radio;
+
 public class Radio {
 
 
@@ -10,7 +11,7 @@ public class Radio {
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
 
-    public void selectingTheWrongRadioStationNumber() {
+    public void changeWrongStationNumber() {
         if (currentRadioStation >= maxRadioStation) {
             currentRadioStation = 0;
 
@@ -69,7 +70,13 @@ public class Radio {
 
     }
 
-    public void setCurrentRadioStation(int currentRadioStation) {
+    public void setRadioStation(int currentRadioStation) {
+        if (currentRadioStation > maxRadioStation) {
+            return;
+        }
+        if (currentRadioStation < minRadioStation) {
+            return;
+        }
         this.currentRadioStation = currentRadioStation;
     }
 }
